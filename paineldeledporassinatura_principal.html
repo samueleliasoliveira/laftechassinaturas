@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laftech Assinatura - Painéis de LED por Assinatura B2B</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc; /* Fundo leve para B2B */
+        }
+        .hero-background {
+            background-image: url('https://raw.githubusercontent.com/samueleliasoliveira/varcomtecnologia/refs/heads/main/assets/img/1761668467118.jpg'); /* URL da imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 58, 138, 0.7); /* Overlay azul semi-transparente para legibilidade */
+        }
+        .card-shadow {
+            box-shadow: 0 15px 30px -10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho (Fictício) --><header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-900">Laftech <span class="text-blue-600">Assinatura</span></div>
+            <nav class="hidden md:block">
+                <a href="#vantagens" class="text-gray-600 hover:text-blue-600 mx-3 font-medium">Vantagens</a>
+                <a href="#objeção" class="text-gray-600 hover:text-blue-600 mx-3 font-medium">Custo Oculto</a>
+                <a href="#prova-social" class="text-gray-600 hover:text-blue-600 mx-3 font-medium">Clientes</a>
+                <a href="#faq" class="text-gray-600 hover:text-blue-600 mx-3 font-medium">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. DOBRA PRINCIPAL (ABOVE THE FOLD) --><main class="hero-background pt-16 pb-20 sm:pt-24 sm:pb-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white flex flex-col lg:flex-row items-center relative z-10">
+            
+            <!-- Copy Principal --><div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                    Painéis de LED por <span class="text-orange-400">Assinatura</span>.
+                </h1>
+                <h2 class="mt-4 text-xl sm:text-2xl font-light opacity-90">
+                    Elimine o custo de propriedade, a dor da depreciação e o risco de tecnologia obsoleta. Sua infraestrutura de eventos e tecnologia sempre no futuro, com previsibilidade total.
+                </h2>
+                <div class="mt-10 flex items-center space-x-4">
+                    <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <p class="text-lg font-semibold text-yellow-400">Tecnologia de ponta garantida.</p>
+                </div>
+            </div>
+            
+            <!-- Formulário de Conversão (Fundo de Funil) --><div class="lg:w-1/2 w-full lg:max-w-md">
+                <div class="bg-white p-8 sm:p-10 rounded-xl card-shadow text-gray-800">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-blue-800">Solicite Sua Cotação Personalizada Agora</h3>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Cotação simulada enviada! Agradecemos o seu contato.');">
+                        <div class="space-y-4">
+                            <div>
+                                <label for="nome" class="block text-sm font-medium text-gray-700">Nome Completo</label>
+                                <input type="text" id="nome" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-blue-500 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">E-mail Corporativo</label>
+                                <input type="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-blue-500 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="telefone" class="block text-sm font-medium text-gray-700">Telefone (WhatsApp)</label>
+                                <input type="tel" id="telefone" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-blue-500 focus:ring-blue-500">
+                            </div>
+                            <div class="pt-2">
+                                <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg transition duration-200 shadow-lg transform hover:scale-[1.02]">
+                                    Solicite Sua Cotação Personalizada Agora
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <!-- Gatilho de Confiança --><p class="text-xs text-center mt-4 text-gray-500">
+                        Garantia de contato em até 4 horas úteis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 2. SEÇÃO DE VANTAGENS (POR QUE ASSINAR?) --><section id="vantagens" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-12">
+                O Próximo Nível de Infraestrutura Visual: Foco no seu Core Business
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Pilar 1: Economia e Previsibilidade --><div class="p-6 rounded-xl bg-blue-50 border border-blue-200 hover:shadow-xl transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V4m0 12v4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Economia e Previsibilidade</h3>
+                    <ul class="text-left text-gray-600 space-y-3 list-inside">
+                        <li class="flex items-start"><span class="mr-2 text-blue-600">•</span> **Zero CAPEX:** Não imobilize capital na compra de ativos. Use seu orçamento de despesas operacionais (OPEX).</li>
+                        <li class="flex items-start"><span class="mr-2 text-blue-600">•</span> **Dedução Fiscal:** Mensalidades 100% dedutíveis como despesa operacional, otimizando sua base de cálculo.</li>
+                        <li class="flex items-start"><span class="mr-2 text-blue-600">•</span> **Fluxo de Caixa Estável:** Pagamentos fixos mensais garantem previsibilidade total para seu planejamento financeiro de longo prazo.</li>
+                    </ul>
+                </div>
+
+                <!-- Pilar 2: Tecnologia Sempre Atualizada --><div class="p-6 rounded-xl bg-blue-50 border border-blue-200 hover:shadow-xl transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3.25m-7.25-11.5L9 3h6l1.5 4m-4.5 13.5v-2a1 1 0 011-1h2a1 1 0 011 1v2m-6-13.5l1.5 4h-3L7.5 7.5zM12 18V6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Tecnologia Sempre Atualizada</h3>
+                    <ul class="text-left text-gray-600 space-y-3 list-inside">
+                        <li class="flex items-start"><span class="mr-2 text-blue-600">•</span> **Upgrade Programado:** Garantia de substituição dos painéis antes da obsolescência tecnológica (fresnel, pitch, processamento).</li>
+                        <li class="flex items-start"><span class="mr-2 text-blue-600">•</span> **Acesso Imediato ao Topo:** Utilize sempre os modelos de LED de ponta, com máxima resolução e menor pitch, garantindo o impacto visual ideal.</li>
+                        <li class="flex items-start"><span class="mr-2 text-blue-600">•</span> **Vantagem Competitiva:** Mantenha seus eventos, stands e instalações fixas com o que há de mais moderno no mercado de visualização.</li>
+                    </ul>
+                </div>
+
+                <!-- Pilar 3: Serviço Totalmente Gerenciado --><div class="p-6 rounded-xl bg-blue-50 border border-blue-200 hover:shadow-xl transition duration-300">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.696 5.176-1.406 9-6.105 9-11.696 0-1.017-.168-2.006-.479-2.944z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Serviço Totalmente Gerenciado</h3>
+                    <ul class="text-left text-gray-600 space-y-3 list-inside">
+                        <li class="flex items-start"><span class="mr-2 text-blue-600">•</span> **Manutenção Inclusa (24/7):** Manutenção preventiva e corretiva completa, sem custos extras ou surpresas.</li>
+                        <li class="flex items-start"><span class="mr-2 text-blue-600">•</span> **Logística e Armazenamento:** Cuidamos de todo o transporte, seguro e armazenamento dos painéis quando não estiverem em uso.</li>
+                        <li class="flex items-start"><span class="mr-2 text-blue-600">•</span> **Equipe Técnica Especializada:** Serviço *turn-key* com instalação, desinstalação e monitoramento feitos por profissionais Laftech.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SEÇÃO DE QUEBRA DE OBJEÇÃO (CONTRAS DA COMPRA) --><section id="objeção" class="py-20 bg-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-12">
+                O Custo Oculto da Propriedade: Por Que Comprar um Painel de LED é um Risco Financeiro e Operacional
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 text-lg">
+                
+                <div class="bg-white p-6 rounded-xl border-t-4 border-red-500 shadow-md">
+                    <h3 class="font-bold text-red-600 mb-3">1. Depreciação e Obsolescência</h3>
+                    <p class="text-gray-700">Seu ativo perde valor exponencialmente a cada ano. No momento em que a tecnologia avança, você fica preso a um equipamento defasado e de baixo valor de revenda.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border-t-4 border-red-500 shadow-md">
+                    <h3 class="font-bold text-red-600 mb-3">2. Manutenção Inesperada</h3>
+                    <p class="text-gray-700">Custos altos e não planejados com troca de módulos, fontes e processadores, gerando picos de despesas que afetam diretamente a sua margem de lucro.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border-t-4 border-red-500 shadow-md">
+                    <h3 class="font-bold text-red-600 mb-3">3. Logística e Armazenamento Complexos</h3>
+                    <p class="text-gray-700">Alto custo e esforço para armazenar painéis de forma segura, garantindo as condições ideais (temperatura, umidade) e espaço físico valioso.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border-t-4 border-red-500 shadow-md">
+                    <h3 class="font-bold text-red-600 mb-3">4. Gestão Operacional e Pessoal</h3>
+                    <p class="text-gray-700">Necessidade de alocar ou contratar equipe interna para gerir o estoque, realizar manutenção de 1º nível e acompanhar a logística, desviando o foco do seu *core business*.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PROVA SOCIAL / AUTORIDADE --><section id="prova-social" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-12">
+                Nossos Clientes Falam Por Nós: Confiabilidade e Suporte Total
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Depoimento 1: Suporte Técnico e Eventos --><div class="bg-gray-50 p-6 rounded-xl border-l-4 border-blue-600 shadow-md">
+                    <p class="text-lg italic text-gray-700 mb-4">"No nosso último congresso, um painel apresentou falha crítica a 1 hora do início. A equipe Laftech estava no local e substituiu o módulo em 15 minutos, sem impacto no cronograma. O suporte 24/7 deles é o nosso seguro de tranquilidade."</p>
+                    <p class="font-semibold text-gray-900">— Gerente de Produção, Grande Agência de Eventos Corporativos</p>
+                </div>
+                
+                <!-- Depoimento 2: Qualidade/Confiabilidade e Tecnologia --><div class="bg-gray-50 p-6 rounded-xl border-l-4 border-blue-600 shadow-md">
+                    <p class="text-lg italic text-gray-700 mb-4">"A qualidade da imagem dos painéis Laftech está sempre acima da concorrência. Com o programa de assinatura, garantimos que nossas instalações fixas utilizem a tecnologia mais recente para impressionar nossos clientes em todas as apresentações."</p>
+                    <p class="font-semibold text-gray-900">— Diretor de TI, Multinacional de Tecnologia</p>
+                </div>
+
+                <!-- Depoimento 3: Benefício Financiero - OPEX --><div class="bg-gray-50 p-6 rounded-xl border-l-4 border-blue-600 shadow-md">
+                    <p class="text-lg italic text-gray-700 mb-4">"O modelo de assinatura nos permitiu tirar um grande investimento do CAPEX e tratá-lo como despesa operacional previsível. Isso simplificou nossa aprovação orçamentária e liberou capital para outras inovações."</p>
+                    <p class="font-semibold text-gray-900">— CFO, Startup de Alto Crescimento</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SEÇÃO DE FAQ (PERGUNTAS FREQUENTES) --><section id="faq" class="py-20 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-12">
+                Dúvidas Comuns Resolvidas
+            </h2>
+            
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 --><div class="bg-white p-5 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-2">1. Qual o prazo mínimo de contrato para a Laftech Assinatura?</h3>
+                    <p class="text-gray-700">O prazo mínimo padrão é de 12 meses, flexível de acordo com o volume de equipamentos e a necessidade específica do seu projeto.</p>
+                </div>
+
+                <!-- FAQ Item 2 --><div class="bg-white p-5 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-2">2. A instalação e desinstalação estão inclusas na mensalidade?</h3>
+                    <p class="text-gray-700">Sim. O serviço é *full-service*, cobrindo toda a logística, instalação, configuração, e desinstalação dos painéis.</p>
+                </div>
+
+                <!-- FAQ Item 3 --><div class="bg-white p-5 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-2">3. Vocês oferecem serviço de criação de conteúdo/programação?</h3>
+                    <p class="text-gray-700">Nós nos concentramos na infraestrutura. Contudo, possuímos uma rede de parceiros especializados em conteúdo e programação visual que podemos recomendar e integrar ao projeto.</p>
+                </div>
+
+                <!-- FAQ Item 4 --><div class="bg-white p-5 rounded-xl shadow-md">
+                    <h3 class="font-bold text-lg text-blue-800 mb-2">4. Como funciona o suporte técnico fora do horário comercial?</h3>
+                    <p class="text-gray-700">Nosso suporte de Nível 1 e 2 é 24 horas por dia, 7 dias por semana, por telefone e presencial. Em caso de falha crítica em campo, o SLA de atendimento é garantido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CTA FINAL --><section class="py-16 hero-background text-white text-center">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
+                Não Perca Mais Tempo Lidando com Ativos e Riscos. Fale com um Especialista em <span class="text-yellow-400">Assinatura</span> de Painéis de LED.
+            </h2>
+            <p class="text-xl font-light mb-8 opacity-90">
+                O modelo de locação por assinatura é o futuro da infraestrutura B2B. Deixe-nos calcular a economia e o ganho operacional para o seu negócio.
+            </p>
+            <a href="#" onclick="alert('Redirecionando para o formulário de contato...');" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-lg transition duration-300 shadow-xl text-xl transform hover:scale-[1.05]">
+                Agende uma Conversa com Nossos Consultores B2B
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé --><footer class="bg-gray-800 py-8 text-center text-gray-400">
+        <p>&copy; 2024 Laftech Assinatura. Todos os direitos reservados. Foco B2B em Tecnologia e Eventos.</p>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp (NÃO Dinâmico) -->
+    <a href="https://api.whatsapp.com/send?phone=5599999999999&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20para%20Pain%C3%A9is%20de%20LED%20por%20Assinatura." target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center bg-green-500 hover:bg-green-500 text-white p-3 rounded-full shadow-2xl transition duration-500 transform hover:scale-105" aria-label="Fale agora com um consultor via WhatsApp">
+        
+        <!-- Texto de Destaque (Sempre visível em telas maiores que MD - 768px) -->
+        <span class="mr-3 text-sm font-bold bg-green-500 text-white px-3 py-1 rounded-full hidden md:inline-block">
+            Fale agora com um consultor
+        </span>
+        
+        <!-- Ícone do WhatsApp (Imagem) -->
+        <img src="https://imagepng.org/wp-content/uploads/2017/08/WhatsApp-icone.png" alt="Ícone do WhatsApp" class="w-8 h-8 rounded-full">
+    </a>
+
+</body>
+</html>
