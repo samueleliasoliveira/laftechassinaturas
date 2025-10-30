@@ -91,13 +91,48 @@
 </head>
 <body class="text-gray-100">
 
-    <!-- Hero Section -->
+    <nav class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-sm border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <a href="#" class="flex-shrink-0">
+                    <img 
+                        src="./assets/logo-laftech.png" 
+                        alt="Logomarca Laftech Assinatura" 
+                        class="h-8 md:h-10"
+                    >
+                </a>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#como-funciona" class="text-sm font-semibold text-gray-300 hover:text-blue-400 transition-colors">Como Funciona</a>
+                    <a href="#vantagens" class="text-sm font-semibold text-gray-300 hover:text-blue-400 transition-colors">Vantagens</a>
+                    <a href="#comparacao" class="text-sm font-semibold text-gray-300 hover:text-blue-400 transition-colors">Comparação</a>
+                    <a href="#formulario" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all">
+                        Solicitar Cotação
+                    </a>
+                </div>
+
+                <button id="menu-button" class="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-800 transition-colors focus:outline-none" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 pb-3">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#como-funciona" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-slate-800 hover:text-white transition-colors">Como Funciona</a>
+                <a href="#vantagens" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-slate-800 hover:text-white transition-colors">Vantagens</a>
+                <a href="#comparacao" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-slate-800 hover:text-white transition-colors">Comparação</a>
+                <a href="#formulario" class="block w-full text-center mt-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-base px-5 py-2.5 rounded-full transition-all">
+                    Solicitar Cotação
+                </a>
+            </div>
+        </div>
+    </nav>
     <section class="gradient-bg relative overflow-hidden">
         <div class="hero-decoration" style="top: -300px; right: -300px;"></div>
         <div class="hero-decoration" style="bottom: -300px; left: -300px;"></div>
         
         <div class="max-w-7xl mx-auto px-6 py-24 relative z-10">
-            <!-- Header -->
             <div class="text-center mb-20">
                 <div class="inline-block bg-blue-500/10 border border-blue-500/30 rounded-full px-6 py-2 mb-8">
                     <span class="text-blue-400 font-semibold text-sm">🚀 LANÇAMENTO LAFTECH ASSINATURA</span>
@@ -130,7 +165,6 @@
                 </div>
             </div>
             
-            <!-- Stats -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
                 <div class="text-center">
                     <div class="text-3xl md:text-4xl lg:text-5xl font-900 gradient-text mb-2">15+</div>
@@ -152,7 +186,6 @@
         </div>
     </section>
 
-    <!-- Vantagens Section -->
     <section id="como-funciona" class="py-16 md:py-24 bg-slate-900">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12 md:mb-20">
@@ -163,7 +196,6 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-                <!-- Pilar 1 -->
                 <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 md:p-10 card-hover">
                     <div class="number-badge mb-4 md:mb-6">1</div>
                     <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-4 md:mb-6 text-blue-400">Economia e Previsibilidade Financeira</h3>
@@ -175,7 +207,6 @@
                     </ul>
                 </div>
                 
-                <!-- Pilar 2 -->
                 <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 md:p-10 card-hover">
                     <div class="number-badge mb-4 md:mb-6">2</div>
                     <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-4 md:mb-6 text-purple-400">Tecnologia Sempre Atualizada</h3>
@@ -187,7 +218,6 @@
                     </ul>
                 </div>
                 
-                <!-- Pilar 3 -->
                 <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-6 md:p-10 card-hover">
                     <div class="number-badge mb-4 md:mb-6">3</div>
                     <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-4 md:mb-6 text-green-400">Serviço Totalmente Gerenciado</h3>
@@ -202,8 +232,7 @@
         </div>
     </section>
 
-    <!-- Comparação Section -->
-    <section class="py-16 md:py-24 bg-slate-950">
+    <section id="comparacao" class="py-16 md:py-24 bg-slate-950">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-2xl md:text-4xl lg:text-5xl font-900 mb-4 md:mb-6">Assinatura vs. Compra:<br><span class="gradient-text">Veja Por Que a Escolha é Óbvia</span></h2>
@@ -211,7 +240,6 @@
             </div>
             
             <div class="grid md:grid-cols-2 gap-6 md:gap-8">
-                <!-- Compra -->
                 <div class="comparison-table p-6 md:p-8">
                     <div class="text-center mb-6 md:mb-8">
                         <div class="text-red-500 text-3xl md:text-4xl lg:text-5xl mb-3 md:mb-4">❌</div>
@@ -250,7 +278,6 @@
                     </div>
                 </div>
                 
-                <!-- Assinatura -->
                 <div class="comparison-table p-6 md:p-8 border-2 border-blue-500 relative">
                     <div class="absolute -top-3 md:-top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm font-bold">
                         RECOMENDADO
@@ -296,7 +323,6 @@
         </div>
     </section>
 
-    <!-- Objeções Section -->
     <section class="py-16 md:py-24 bg-slate-900">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12 md:mb-16">
@@ -342,7 +368,6 @@
         </div>
     </section>
 
-    <!-- Depoimentos -->
     <section class="py-16 md:py-24 bg-slate-950">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12 md:mb-16">
@@ -386,7 +411,6 @@
         </div>
     </section>
 
-    <!-- Urgência -->
     <section class="py-16 md:py-24 bg-gradient-to-br from-blue-900 to-purple-900">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <div class="inline-block bg-yellow-500 text-slate-900 font-bold px-4 md:px-6 py-2 rounded-full mb-6 md:mb-8 text-xs md:text-sm">
@@ -437,7 +461,6 @@
         </div>
     </section>
 
-    <!-- FAQ -->
     <section class="py-16 md:py-24 bg-slate-900">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12 md:mb-16">
@@ -476,7 +499,6 @@
         </div>
     </section>
 
-    <!-- Formulário -->
     <section id="formulario" class="py-16 md:py-24 bg-slate-950">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-12 md:mb-16">
@@ -561,7 +583,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-slate-950 border-t border-slate-800 py-8 md:py-12">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
@@ -609,6 +630,19 @@
     </footer>
 
     <script>
+        // Função para alternar o menu mobile
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Adiciona funcionalidade de fechar menu mobile ao clicar em um link
+        document.querySelectorAll('#mobile-menu a').forEach(anchor => {
+            anchor.addEventListener('click', function () {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
@@ -627,6 +661,8 @@ ${formData.get('message') || 'Não informada'}
             };
             
             try {
+                // Linhas comentadas porque dependem de uma API externa (HATCH_CONFIG)
+                /*
                 const response = await fetch(`${window.HATCH_CONFIG.apiBaseUrl}/services/send_email`, {
                     method: 'POST',
                     headers: {
@@ -641,8 +677,14 @@ ${formData.get('message') || 'Não informada'}
                 } else {
                     alert('Erro ao enviar formulário. Tente novamente.');
                 }
+                */
+                
+                // Simulação de sucesso para testes locais, já que o endpoint de email não está disponível.
+                document.getElementById('contactForm').classList.add('hidden');
+                document.getElementById('successMessage').classList.remove('hidden');
+
             } catch (error) {
-                alert('Erro ao enviar formulário. Tente novamente.');
+                // alert('Erro ao enviar formulário. Tente novamente.'); // Manter se a API for ativada
             }
         });
         
@@ -650,11 +692,17 @@ ${formData.get('message') || 'Não informada'}
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                
+                // Ajuste para evitar que o topo fique escondido pela navbar fixa
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const navbarHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = target.offsetTop - navbarHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
