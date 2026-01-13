@@ -25,6 +25,44 @@
         .animate-whatsapp {
             animation: pulse-whatsapp 2s infinite;
         }
+        /* Garantia de proporção para o vídeo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .video-container iframe, .video-preview {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Botão de Play Estilizado */
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(34, 197, 94, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            z-index: 10;
+        }
+        .video-container:hover .play-button {
+            transform: translate(-50%, -50%) scale(1.15);
+            background: #22c55e;
+            box-shadow: 0 0 50px rgba(34, 197, 94, 0.5);
+        }
     </style>
 </head>
 <body class="bg-white text-slate-900 antialiased">
@@ -57,15 +95,45 @@
         </div>
     </section>
 
-    <!-- Authority Section: Faça como as grandes empresas -->
+    <!-- Authority Section -->
     <section class="py-12 bg-slate-50 border-y border-slate-100">
         <div class="container mx-auto px-4">
             <h2 class="text-center text-slate-500 font-bold uppercase tracking-[0.2em] text-xs mb-10">Faça como as grandes empresas</h2>
             <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/ipiranga.png" alt="[Logo Ipiranga]" class="h-10 md:h-14 w-auto object-contain">
-                <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/shell-logo-0.png" alt="[Logo Shell]" class="h-14 md:h-20 w-auto object-contain">
-                <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/petrobras.png" alt="[Logo Petrobras]" class="h-10 md:h-14 w-auto object-contain">
+                <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/ipiranga.png" alt="Logo Ipiranga" class="h-10 md:h-14 w-auto object-contain">
+                <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/shell-logo-0.png" alt="Logo Shell" class="h-14 md:h-20 w-auto object-contain">
+                <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/petrobras.png" alt="Logo Petrobras" class="h-10 md:h-14 w-auto object-contain">
             </div>
+        </div>
+    </section>
+
+    <!-- Video Section: TECNOLOGIA COM PREVIEW CUSTOMIZADO -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 mb-4 uppercase tracking-tighter italic">Tecnologia que Transforma a sua Pista</h2>
+                <div class="w-16 h-1.5 bg-green-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-600 text-lg">Veja em ação como os painéis de LED da LAF TECH elevam o padrão visual e a visibilidade do seu posto.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-4 md:border-8 border-slate-50 bg-slate-900 relative">
+                <div class="video-container" id="video-wrapper" onclick="startVideo()">
+                    <!-- Preview Image & Play Button Overlay -->
+                    <div id="video-overlay" class="video-preview group">
+                        <!-- Imagem de preview fornecida -->
+                        <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/painel_de_led_para_posto_de_gasolina_3x1_telao_p8_outdoor_133_3_d50b99bcd8955e145052f08702ddb560.webp" alt="Preview Painel LED LAF TECH" class="w-full h-full object-cover opacity-90 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                        <div class="play-button">
+                            <svg class="w-12 h-12 text-white ml-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5.14v14l11-7-11-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Container onde o Iframe do Vimeo será injetado -->
+                    <div id="iframe-target" class="absolute top-0 left-0 w-full h-full"></div>
+                </div>
+            </div>
+            <p class="text-center mt-6 text-slate-400 text-sm italic font-medium">Toque para assistir o vídeo demonstrativo.</p>
         </div>
     </section>
 
@@ -94,7 +162,7 @@
                     </div>
                 </div>
                 <div class="relative overflow-hidden group">
-                    <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/Propecto%20para%20Posto%20de%20Combustivel.png" alt="[Imagem de Posto de Combustível Moderno]" class="w-full h-auto drop-shadow-xl transition-transform duration-500 group-hover:scale-105">
+                    <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/Propecto%20para%20Posto%20de%20Combustivel.png" alt="Posto de Combustível Moderno" class="w-full h-auto drop-shadow-xl transition-transform duration-500 group-hover:scale-105">
                     <div class="absolute bottom-6 left-6">
                         <span class="bg-green-600 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">Upgrade de Pista</span>
                     </div>
@@ -143,29 +211,29 @@
                 <h2 class="text-3xl font-bold mb-12 text-slate-950 uppercase tracking-tighter">Assinatura LAF TECH: A Escolha Financeira Inteligente</h2>
                 <div class="bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-slate-200 text-left">
                     <div class="overflow-x-auto">
-                        <table class="w-full text-left">
+                        <table class="w-full min-w-[320px] text-left">
                             <thead>
-                                <tr class="bg-slate-900 text-white text-xs uppercase tracking-widest font-bold">
-                                    <th class="py-6 px-8">Característica</th>
-                                    <th class="py-6 px-8 opacity-60 text-slate-300">Compra Direta</th>
-                                    <th class="py-6 px-8 bg-green-600">Assinatura LAF TECH</th>
+                                <tr class="bg-slate-900 text-white text-[10px] md:text-xs uppercase tracking-widest font-bold">
+                                    <th class="py-4 md:py-6 px-4 md:px-8">Característica</th>
+                                    <th class="py-4 md:py-6 px-4 md:px-8 bg-green-600 text-center md:text-left">Assinatura LAF TECH</th>
+                                    <th class="py-4 md:py-6 px-4 md:px-8 opacity-60 text-slate-300 text-center md:text-left">Compra Direta</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-slate-100 text-slate-700">
                                 <tr>
-                                    <td class="py-6 px-8 font-semibold text-sm md:text-base">Investimento Inicial</td>
-                                    <td class="py-6 px-8 italic text-slate-400 text-sm">Desembolso Pesado de Caixa</td>
-                                    <td class="py-6 px-8 text-green-600 font-black bg-green-50/30 text-xl">ZERO CAPEX</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 font-semibold text-xs md:text-base">Investimento Inicial</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 text-green-600 font-black bg-green-50/30 text-base md:text-xl text-center md:text-left">ZERO CAPEX</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 italic text-slate-400 text-[10px] md:text-sm text-center md:text-left">Desembolso Pesado</td>
                                 </tr>
                                 <tr>
-                                    <td class="py-6 px-8 font-semibold text-sm md:text-base">Manutenção e Peças</td>
-                                    <td class="py-6 px-8 text-slate-400 text-sm">Custo Variável e Alto</td>
-                                    <td class="py-6 px-8 text-green-600 font-black bg-green-50/30 italic">Inclusa Vitalícia</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 font-semibold text-xs md:text-base">Manutenção e Peças</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 text-green-600 font-black bg-green-50/30 italic text-sm md:text-base text-center md:text-left">Inclusa Vitalícia</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 text-slate-400 text-[10px] md:text-sm text-center md:text-left">Custo Variável</td>
                                 </tr>
                                 <tr>
-                                    <td class="py-6 px-8 font-semibold text-sm md:text-base">Benefício Tributário</td>
-                                    <td class="py-6 px-8 text-slate-400 text-sm">Depreciação Lenta</td>
-                                    <td class="py-6 px-8 text-green-600 font-black bg-green-50/30 uppercase">100% Dedução IR (OPEX)</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 font-semibold text-xs md:text-base">Benefício Tributário</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 text-green-600 font-black bg-green-50/30 uppercase text-sm md:text-base text-center md:text-left">100% Dedução IR</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 text-slate-400 text-[10px] md:text-sm text-center md:text-left">Depreciação Lenta</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -243,6 +311,30 @@
             </div>
         </a>
     </div>
+
+    <!-- Script para carregar o vídeo Vimeo ao clicar -->
+    <script>
+        function startVideo() {
+            const wrapper = document.getElementById('iframe-target');
+            const overlay = document.getElementById('video-overlay');
+            const vimeoId = '1154039813'; 
+            
+            // Injeção do Iframe do Vimeo com autoplay habilitado
+            wrapper.innerHTML = `
+                <iframe 
+                    src="https://player.vimeo.com/video/${vimeoId}?autoplay=1&muted=0&badge=0&autopause=0&player_id=0&app_id=58479" 
+                    title="Demonstração LAF TECH" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                    class="absolute top-0 left-0 w-full h-full"
+                    allowfullscreen>
+                </iframe>
+            `;
+            
+            // Esconde a imagem de prévia
+            overlay.style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
