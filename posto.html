@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAF TECH - Assinatura de Painéis LED para Postos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .bg-led-glow-light {
+            background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.08) 0%, rgba(255, 255, 255, 0) 50%);
+        }
+        .text-glow-green {
+            text-shadow: 0 0 8px rgba(34, 197, 94, 0.2);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04);
+        }
+        @keyframes pulse-whatsapp {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .animate-whatsapp {
+            animation: pulse-whatsapp 2s infinite;
+        }
+        /* Garantia de proporção para o vídeo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .video-container iframe, .video-preview {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Botão de Play Estilizado */
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(34, 197, 94, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            z-index: 10;
+        }
+        .video-container:hover .play-button {
+            transform: translate(-50%, -50%) scale(1.15);
+            background: #22c55e;
+            box-shadow: 0 0 50px rgba(34, 197, 94, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-20 overflow-hidden bg-led-glow-light">
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Logo Oficial Centralizada -->
+            <div class="flex justify-center mb-12 lg:mb-16">
+                <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/laftech3.png" alt="Logo LAF TECH" class="h-6 md:h-8 w-auto opacity-90">
+            </div>
+            
+            <div class="max-w-4xl mx-auto text-center">
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-green-50 text-green-700 rounded-full border border-green-200">
+                    Oportunidade Exclusiva para Gestores do Varejo
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight text-slate-950">
+                    Destaque o seu <span class="text-green-600">Posto de Combustível</span> a quilômetros: <span class="text-green-600 text-glow-green italic">Domine a sua pista</span> e aumente a sua galonagem.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    A tecnologia das maiores redes do Brasil agora disponível para o seu posto com <strong>Investimento Zero (Zero CAPEX)</strong> e manutenção inclusa. Troque os seus preços instantaneamente e atraia o público premium.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contato" class="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white px-10 py-5 rounded-2xl font-extrabold text-xl transition-all shadow-2xl shadow-green-600/30 transform hover:-translate-y-1">
+                        QUERO MEU DIAGNÓSTICO DE ROI GRATUITO
+                    </a>
+                </div>
+                <p class="mt-6 text-sm text-slate-400 font-medium italic">Transforme visibilidade em lucro bruto imediato com a LAF TECH.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority Section -->
+    <section class="py-12 bg-slate-50 border-y border-slate-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-slate-500 font-bold uppercase tracking-[0.2em] text-xs mb-10">Faça como as grandes empresas</h2>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/ipiranga.png" alt="Logo Ipiranga" class="h-10 md:h-14 w-auto object-contain">
+                <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/shell-logo-0.png" alt="Logo Shell" class="h-14 md:h-20 w-auto object-contain">
+                <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/petrobras.png" alt="Logo Petrobras" class="h-10 md:h-14 w-auto object-contain">
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section: TECNOLOGIA COM PREVIEW CUSTOMIZADO -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 mb-4 uppercase tracking-tighter italic">Tecnologia que Transforma a sua Pista</h2>
+                <div class="w-16 h-1.5 bg-green-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-600 text-lg">Veja em ação como os painéis de LED da LAF TECH elevam o padrão visual e a visibilidade do seu posto.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl border-4 md:border-8 border-slate-50 bg-slate-900 relative">
+                <div class="video-container" id="video-wrapper" onclick="startVideo()">
+                    <!-- Preview Image & Play Button Overlay -->
+                    <div id="video-overlay" class="video-preview group">
+                        <!-- Imagem de preview fornecida -->
+                        <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/painel_de_led_para_posto_de_gasolina_3x1_telao_p8_outdoor_133_3_d50b99bcd8955e145052f08702ddb560.webp" alt="Preview Painel LED LAF TECH" class="w-full h-full object-cover opacity-90 transition-all duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                        <div class="play-button">
+                            <svg class="w-12 h-12 text-white ml-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5.14v14l11-7-11-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Container onde o Iframe do Vimeo será injetado -->
+                    <div id="iframe-target" class="absolute top-0 left-0 w-full h-full"></div>
+                </div>
+            </div>
+            <p class="text-center mt-6 text-slate-400 text-sm italic font-medium">Toque para assistir o vídeo demonstrativo.</p>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 italic text-green-600 uppercase tracking-tighter text-glow-green">O Custo da Invisibilidade</h2>
+                    <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                        Enquanto gasta tempo a trocar números de plástico manualmente, o seu concorrente já atualizou o preço no LED e captou o condutor que vinha a 1km de distância. No setor de combustíveis, segundos valem galões.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-red-50 p-2 rounded-lg">
+                                <svg class="w-5 h-5 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </div>
+                            <p class="text-slate-700"><span class="font-bold">Lentidão Operacional:</span> Equipa exposta ao tempo para trocar preços manualmente.</p>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-red-50 p-2 rounded-lg">
+                                <svg class="w-5 h-5 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            </div>
+                            <p class="text-slate-700"><span class="font-bold">Baixo Alcance:</span> Placas foscas que perdem visibilidade sob o sol forte ou chuva.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden group">
+                    <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/Propecto%20para%20Posto%20de%20Combustivel.png" alt="Posto de Combustível Moderno" class="w-full h-auto drop-shadow-xl transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-6 left-6">
+                        <span class="bg-green-600 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">Upgrade de Pista</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vantagens -->
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-slate-950 uppercase tracking-tighter italic">Soluções para o seu Posto</h2>
+                <div class="w-16 h-1.5 bg-green-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 card-shadow hover:border-green-300 transition-all duration-300 text-center md:text-left">
+                    <div class="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mb-8 shadow-inner mx-auto md:mx-0">
+                        <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-950">Gestão Remota</h3>
+                    <p class="text-slate-600 leading-relaxed">Atualize os preços de combustível pelo smartphone. Responda à concorrência antes deles trocarem o primeiro dígito.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 card-shadow hover:border-green-300 transition-all duration-300 text-center md:text-left">
+                    <div class="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mb-8 shadow-inner mx-auto md:mx-0">
+                        <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Alcance Rodoviário</h3>
+                    <p class="text-slate-600 leading-relaxed">Painéis de alto contraste desenvolvidos para serem vistos a grandes distâncias, convertendo tráfego em parada.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 card-shadow hover:border-green-300 transition-all duration-300 text-center md:text-left">
+                    <div class="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mb-8 shadow-inner mx-auto md:mx-0">
+                        <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-950">Estética Premium</h3>
+                    <p class="text-slate-600 leading-relaxed">Eleve o padrão visual da sua bandeira e transmita confiança para frotistas e clientes de ticket alto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparação -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-12 text-slate-950 uppercase tracking-tighter">Assinatura LAF TECH: A Escolha Financeira Inteligente</h2>
+                <div class="bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-slate-200 text-left">
+                    <div class="overflow-x-auto">
+                        <table class="w-full min-w-[320px] text-left">
+                            <thead>
+                                <tr class="bg-slate-900 text-white text-[10px] md:text-xs uppercase tracking-widest font-bold">
+                                    <th class="py-4 md:py-6 px-4 md:px-8">Característica</th>
+                                    <th class="py-4 md:py-6 px-4 md:px-8 bg-green-600 text-center md:text-left">Assinatura LAF TECH</th>
+                                    <th class="py-4 md:py-6 px-4 md:px-8 opacity-60 text-slate-300 text-center md:text-left">Compra Direta</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-slate-700">
+                                <tr>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 font-semibold text-xs md:text-base">Investimento Inicial</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 text-green-600 font-black bg-green-50/30 text-base md:text-xl text-center md:text-left">ZERO CAPEX</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 italic text-slate-400 text-[10px] md:text-sm text-center md:text-left">Desembolso Pesado</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 font-semibold text-xs md:text-base">Manutenção e Peças</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 text-green-600 font-black bg-green-50/30 italic text-sm md:text-base text-center md:text-left">Inclusa Vitalícia</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 text-slate-400 text-[10px] md:text-sm text-center md:text-left">Custo Variável</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 font-semibold text-xs md:text-base">Benefício Tributário</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 text-green-600 font-black bg-green-50/30 uppercase text-sm md:text-base text-center md:text-left">100% Dedução IR</td>
+                                    <td class="py-4 md:py-6 px-4 md:px-8 text-slate-400 text-[10px] md:text-sm text-center md:text-left">Depreciação Lenta</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA & Form -->
+    <section id="contato" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto bg-slate-950 rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-slate-800">
+                <div class="md:w-1/2 bg-green-600 p-10 md:p-16 text-white flex flex-col justify-center">
+                    <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight italic uppercase tracking-tighter">Não perca a safra de Dezembro!</h2>
+                    <p class="text-green-50 mb-8 text-lg opacity-90 leading-relaxed">
+                        Dezembro é o mês da galonagem recorde. Coloque o seu posto no radar dos viajantes agora.
+                    </p>
+                    <div class="p-6 bg-white/10 rounded-2xl border border-white/20">
+                        <p class="text-sm font-bold uppercase tracking-widest text-green-200 mb-2">Oferta Especial</p>
+                        <p class="text-xl font-bold">Diagnóstico de ROI para seu Posto</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-10 md:p-16 bg-slate-950 text-left">
+                    <h3 class="text-2xl font-bold text-white mb-8">Receba sua proposta personalizada</h3>
+                    <form action="#" class="space-y-5">
+                        <div class="group">
+                            <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-widest">O Seu Nome</label>
+                            <input type="text" placeholder="Nome completo" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-4 focus:ring-2 focus:ring-green-500 text-white outline-none transition-all">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-widest">WhatsApp</label>
+                                <input type="tel" placeholder="(00) 00000-0000" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-4 focus:ring-2 focus:ring-green-500 text-white outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-widest">Qtde. de Bicos</label>
+                                <input type="number" placeholder="Ex: 8" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-4 focus:ring-2 focus:ring-green-500 text-white outline-none transition-all">
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-black py-5 rounded-xl shadow-xl transition-all transform active:scale-95 uppercase tracking-widest text-sm mt-4">
+                            SOLICITAR PROPOSTA AGORA
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simple -->
+    <footer class="py-12 bg-white text-center border-t border-slate-100 pb-24 md:pb-12">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center mb-6">
+                <img src="https://raw.githubusercontent.com/samueleliasoliveira/laftechassinaturas/refs/heads/main/laftech3.png" alt="Logo LAF TECH" class="h-5 w-auto opacity-70">
+            </div>
+            <p class="text-slate-400 text-xs font-medium uppercase tracking-widest">© 2024 LAF TECH Digital Signage. Especialista no Varejo de Combustíveis.</p>
+        </div>
+    </footer>
+
+    <!-- Bottom Stick CTA (Mobile) -->
+    <div class="fixed bottom-0 left-0 w-full p-4 md:hidden z-40">
+        <a href="#contato" class="block w-full text-center bg-green-600 text-white font-black py-4 rounded-full shadow-2xl border-2 border-white/20 uppercase tracking-widest text-xs">
+            Aumentar minha galonagem
+        </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-20 right-4 md:bottom-8 md:right-8 z-50 flex items-center group">
+        <a href="https://wa.me/5500000000000" target="_blank" class="animate-whatsapp flex items-center bg-[#25D366] hover:bg-[#20ba5a] text-white p-1.5 rounded-full pl-5 pr-1.5 shadow-2xl transition-all transform hover:scale-105 active:scale-95">
+            <span class="text-sm font-bold mr-3 whitespace-nowrap">Falar com Especialista</span>
+            <div class="bg-white p-2.5 rounded-full flex items-center justify-center shadow-sm">
+                <svg class="w-6 h-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.407 3.481s3.48 5.226 3.481 8.408c-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.3 1.656zm6.29-4.143c1.589.943 3.163 1.415 4.761 1.415 5.242 0 9.507-4.265 9.51-9.51.001-2.546-.991-4.938-2.793-6.74s-4.194-2.794-6.741-2.795c-5.244 0-9.51 4.266-9.512 9.512-.001 1.611.417 3.13 1.21 4.474l-1.042 3.804 3.907-1.026zm11.72-6.113c-.301-.15-.178-.225-1.785-.925-.301-.15-.521-.225-.721.075-.2.3-.772.975-.946 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.487-.89-.794-1.49-1.774-1.665-2.074-.175-.3-.019-.463.131-.612.135-.134.301-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.721-1.735-.987-2.375-.259-.623-.524-.538-.721-.548-.185-.01-.397-.011-.607-.011-.21 0-.551.079-.838.397-.287.318-1.096 1.073-1.096 2.617s1.123 3.029 1.274 3.229c.15.2 2.212 3.377 5.356 4.737.748.324 1.332.518 1.787.662.752.24 1.435.207 1.974.127.601-.09 1.785-.725 2.036-1.425.251-.7.251-1.3.175-1.425-.075-.125-.276-.2-.576-.35z"/>
+                </svg>
+            </div>
+        </a>
+    </div>
+
+    <!-- Script para carregar o vídeo Vimeo ao clicar -->
+    <script>
+        function startVideo() {
+            const wrapper = document.getElementById('iframe-target');
+            const overlay = document.getElementById('video-overlay');
+            const vimeoId = '1154039813'; 
+            
+            // Injeção do Iframe do Vimeo com autoplay habilitado
+            wrapper.innerHTML = `
+                <iframe 
+                    src="https://player.vimeo.com/video/${vimeoId}?autoplay=1&muted=0&badge=0&autopause=0&player_id=0&app_id=58479" 
+                    title="Demonstração LAF TECH" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                    class="absolute top-0 left-0 w-full h-full"
+                    allowfullscreen>
+                </iframe>
+            `;
+            
+            // Esconde a imagem de prévia
+            overlay.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
